@@ -9,7 +9,7 @@ function WeatherForecast() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [corr, setCorr] = useState({});
-  const [error, setError] = useState(null);
+  const [error, setError] = useState({});
   useEffect(() => {
     const fetchData = async () => {
       if (city) {
@@ -35,7 +35,7 @@ function WeatherForecast() {
   const handleSubmit = (event) => {
     event.preventDefault();
     setWeather(null);
-    setError(null);
+    setError(error);
   };
   return (
     <div className="">
