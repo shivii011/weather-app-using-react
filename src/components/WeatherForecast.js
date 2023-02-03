@@ -15,7 +15,7 @@ function WeatherForecast() {
       if (city) {
         try {
           const result = await axios.get(
-            `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
+            `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${API_KEY}`
           );
           console.log(result)
           setWeather(result.data);
